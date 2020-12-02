@@ -1,0 +1,820 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://www.dafont.com/es/akaposse.font?back=theme');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	min-height: 100%;
+	background-image: url(img/fondo.jpg);
+	background-size: cover no-repeat;
+	max-width: 100%
+}
+
+html{
+	height: 100%;
+}
+
+.grid_container{
+	display: grid;
+	grid-template-areas: 
+	"header"  
+	"main"
+	"sidebar"
+	"navbar"
+	"extra"
+	"footer"
+}
+
+/*pantalla escritorio*/
+@media screen and (min-width:950px){
+	.grid_container{
+		grid-template:
+		"header 	header 	header	header" 	170px
+		"main 		main	main 	main"		200px
+		"sidebar	sidebar	extra 	extra"		570px
+		"navbar		testi	testi 	testi"		400px
+		"footer 	footer	footer	footer"		140px /
+		450px		440px 	550px	auto;
+		
+	}
+
+.header{
+	grid-area: header;
+	background-color: #622D50;
+}
+
+.logo{
+	margin-top: 25px;
+	display: block;
+	width: 6%;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.logotipo{
+	display: none;
+}
+
+.main{
+	grid-area: main;
+}
+
+.main h1{
+	color: white;
+	margin-top: 40px;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Roboto Condensed';
+}
+
+.main p{
+	color: white;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+}
+
+.sidebar{
+	grid-area: sidebar;
+}
+	
+.sidebar p{
+	color: white;
+	margin-top: 40px;
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+}
+
+.sidebar morado{
+	color: white;
+	background-color: #571146;
+	width: auto
+	}
+	
+.sidebar moradoc{
+	color: white;
+	background-color: #622D50;
+	width: auto
+	}
+
+.sidebar blanco{
+	color: white;
+	background-color: #FFFFFF;
+	width: auto
+	}
+.sorteo2{
+	display: none;
+}
+
+.sorteo{
+	width: 81.2%;
+	height: auto;
+	margin-left: 15%;
+	margin-top: 10px;
+	box-shadow: 10px 10px 40px black;
+}
+
+.extra{
+	grid-area: extra;
+}
+.extra p{
+	color: white;
+	margin-top: 40px;
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+}
+
+
+.formulario{
+	margin-left: 3%;
+	margin-top: 10px;
+	box-sizing: border-box;
+	width: 68%; 
+	height: 480px;
+	background-color: #622D50;
+}
+
+.formulario h1{
+	background-color: #622D50;
+	box-sizing: border-box;
+	font-family: 'Roboto Condensed';
+	color: white;
+	font-size: 20px;
+ 	text-align: center;
+ 	padding-top: 9%;
+ 	padding-left: 7%;
+ 	padding-right: 7%;
+ 	padding-bottom: 5%;
+}
+
+.formulario label{
+	margin-left: 10%;
+	font-size: 16px;
+ 	font-family:'Roboto Condensed', sans-serif;
+ 	color: white;
+ }
+
+.formulario [type="submit"]{
+	margin-left: 23%;
+	width: 50%;
+	border:1px solid #571146;
+	padding: 2%;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 15px;
+	color:#fff;
+	background-color: #571146;
+}
+
+.formulario [type="text"]{
+	margin-top: 10px;
+	margin-left: 10%;
+	width: 78%;
+	height: 25px;
+	background-color: #571146;
+	color: white;
+	border: none;
+}
+
+.formulario [type="email"]{
+	margin-top: 10px;
+	margin-left: 10%;
+	height: 25px;
+	width: 78%;
+	background-color: #571146;
+	color: white;
+	border: none;
+}
+
+.navbar{
+	grid-area: navbar;
+	background-color: #571146;
+}
+
+.bene{
+	color: white;
+	margin-top: 60px;
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Roboto Condensed';
+}
+
+.puntos{
+	line-height: 80px;
+	font-size: 25px;
+	font-family: 'Roboto Condensed';
+	margin-left: 30%;
+	color: white;
+	margin-top: 20px;
+}
+
+.primero{
+	margin-top: -220px;
+	position: absolute;
+	width: 2.5%;
+	margin-left: 4%;
+}
+
+.testi{
+	grid-area: testi;
+	background-color: #622D50; 
+}
+
+.testi p{
+	color: white;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Roboto Condensed';
+}
+
+.swipe{
+	margin-left: auto;
+	margin-right: auto;
+	width: 55%;
+	height: auto;
+	overflow: hidden;
+}
+
+.swipe ul{
+	list-style: none;
+	width: 400%;
+	display: flex;
+	animation: slide 20s infinite alternate;
+}
+
+.swipe img{
+	width: 100%;
+	padding: 3%;
+	margin-top: 10px;
+}
+
+@keyframes slide{
+	0% {margin-left: 0%;}
+	20% {margin-left: 0%;}
+
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+
+.footer{
+	grid-area: footer;
+	width: 100%;
+}
+	
+.footer a{
+	font-family: 'Roboto Condensed';
+	margin-left: auto;
+  	margin-right: auto;
+ 	font-size: 12px;
+ 	text-decoration: none;
+ 	padding: 2%;
+	box-sizing: border-box;
+ 	color: white;
+	}
+
+.web{
+ 	margin-top: 60px;
+ 	margin-left: 43%;
+}
+
+.web li {
+ 	display: inline;
+}
+
+.web li a {
+	font-family: 'Roboto Condensed';
+ 	font-size: 17px;
+ 	text-decoration: none;
+ 	padding: 2%;
+	box-sizing: border-box;
+	background-color: #571146;
+ 	color: white;
+ }
+
+.web li a:hover {
+ 	color: white;
+ 	margin-top: -2px;
+ }
+}
+
+/*pantalla tablet*/
+@media screen and (min-width:530px) and (max-width: 949px){
+	.grid_container{
+		grid-template:
+		"header 	header 	header	header" 	170px
+		"main 		main	main 	main"		200px
+		"sidebar	sidebar	extra 	extra"		570px
+		"navbar		navbar	navbar 	navbar"		400px
+		"testi		testi	testi 	testi"		500px
+		"footer 	footer	footer	footer"		140px /
+		250px		150px 	400px	auto;
+		
+	}
+
+.header{
+	grid-area: header;
+	background-color: #622D50;
+}
+
+.logo{
+	margin-top: 25px;
+	display: block;
+	width: 10%;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.logotipo{
+	display: none;
+}
+
+.main{
+	grid-area: main;
+}
+
+.main h1{
+	color: white;
+	margin-top: 40px;
+	text-align: center;
+	font-size: 60px;
+	font-family: 'Roboto Condensed';
+}
+
+.main p{
+	color: white;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Roboto Condensed';
+}
+
+.sidebar{
+	grid-area: sidebar;
+}
+
+.sorteo{
+	display: none;
+}
+
+.sorteo2{
+	width: 89.8%;
+	height: auto;
+	margin-left: 13%;
+	margin-top: 10px;
+	box-shadow: 10px 10px 40px black;
+}
+
+.extra{
+	grid-area: extra;
+}
+
+.formulario{
+	margin-left: 11%;
+	margin-top: 10px;
+	box-sizing: border-box;
+	width: 75%; 
+	height: 480px;
+	background-color: #622D50;
+}
+
+.formulario h1{
+	background-color: #622D50;
+	box-sizing: border-box;
+	font-family: 'Roboto Condensed';
+	color: white;
+	font-size: 20px;
+ 	text-align: center;
+ 	padding-top: 9%;
+ 	padding-left: 7%;
+ 	padding-right: 7%;
+ 	padding-bottom: 5%;
+}
+
+.formulario label{
+	margin-left: 10%;
+	font-size: 16px;
+ 	font-family:'Roboto Condensed', sans-serif;
+ 	color: white;
+ }
+
+.formulario [type="submit"]{
+	margin-left: 23%;
+	width: 50%;
+	border:1px solid #571146;
+	padding: 2%;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 15px;
+	color:#fff;
+	background-color: #571146;
+}
+
+.formulario [type="text"]{
+	margin-top: 10px;
+	margin-left: 10%;
+	width: 78%;
+	height: 25px;
+	background-color: #571146;
+	color: white;
+	border: none;
+}
+
+.formulario [type="email"]{
+	margin-top: 10px;
+	margin-left: 10%;
+	height: 25px;
+	width: 78%;
+	background-color: #571146;
+	color: white;
+	border: none;
+}
+
+
+.navbar{
+	grid-area: navbar;
+	background-color: #571146;
+}
+
+.bene{
+	color: white;
+	margin-top: 60px;
+	text-align: center;
+	font-size: 38px;
+	font-family: 'Roboto Condensed';
+}
+
+.puntos{
+	line-height: 80px;
+	font-size: 25px;
+	font-family: 'Roboto Condensed';
+	margin-left: 43%;
+	color: white;
+	margin-top: 20px;
+}
+
+.primero{
+	margin-top: -220px;
+	position: absolute;
+	width: 3.8%;
+	margin-left: 34%;
+}
+
+
+
+.testi{
+	margin-top: 50px;
+	grid-area: testi;
+	background-color: #622D50; 
+}
+
+.testi p{
+	color: white;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Roboto Condensed';
+}
+
+.swipe{
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	height: auto;
+	overflow: hidden;
+}
+
+.swipe ul{
+	list-style: none;
+	width: 400%;
+	display: flex;
+	animation: slide 20s infinite alternate;
+}
+
+.swipe img{
+	padding: 3%;
+	width: 100%;
+}
+
+@keyframes slide{
+	0% {margin-left: 0%;}
+	20% {margin-left: 0%;}
+
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+
+.footer{
+	grid-area: footer;
+	width: 100%;
+}
+	
+.footer a{
+	font-family: 'Roboto Condensed';
+	margin-left: auto;
+  	margin-right: auto;
+ 	font-size: 10px;
+ 	text-decoration: none;
+ 	padding: 2%;
+	box-sizing: border-box;
+ 	color: white;
+	}
+
+.web{
+ 	margin-top: 60px;
+ 	margin-left: 43%;
+}
+
+.web li {
+ 	display: inline;
+}
+
+.web li a {
+	font-family: 'Roboto Condensed';
+ 	font-size: 17px;
+ 	text-decoration: none;
+ 	padding: 2%;
+	box-sizing: border-box;
+	background-color: #571146;
+ 	color: white;
+ }
+
+.web li a:hover {
+ 	color: white;
+ 	margin-top: -2px;
+ }
+
+}
+
+
+/*pantalla celular*/
+@media screen and (max-width: 529px){
+	.grid_container{
+		grid-template:
+		"header 	header 	header	header" 	110px
+		"main 		main	main 	main"		170px
+		"sidebar	sidebar	sidebar	sidebar"	350px
+		"extra		extra	extra	extra"		580px
+		"navbar		navbar	navbar	navbar"		400px
+		"testi 		testi	testi	testi"		400px 
+		"footer		footer	footer	footer"		140px/
+		450px		auto 	auto	auto;
+		
+	}
+
+
+.header{
+	grid-area: header;
+	background-color: #622D50;
+}
+
+.logotipo{
+	margin-top: 35px;
+	display: block;
+	width: 60%;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.logo{
+	display: none;
+}
+
+.main{
+	grid-area: main;
+}
+
+.main h1{
+	color: white;
+	margin-top: 40px;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Roboto Condensed';
+}
+
+.main p{
+	color: white;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 26px;
+	font-family: 'Roboto Condensed';
+}
+
+.sidebar{
+	grid-area: sidebar;
+}
+
+.sorteo{
+	width: 80%;
+	height: auto;
+	margin-left: 10%;
+	margin-top: 10px;
+	box-shadow: 10px 10px 40px black;
+}
+
+.sorteo2{
+	display: none;
+}
+
+.extra{
+	grid-area: extra;
+}
+
+.formulario{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	box-sizing: border-box;
+	width: 75%; 
+	height: 480px;
+	background-color: #622D50;
+}
+
+.formulario h1{
+	background-color: #622D50;
+	box-sizing: border-box;
+	font-family: 'Roboto Condensed';
+	color: white;
+	font-size: 20px;
+ 	text-align: center;
+ 	padding-top: 9%;
+ 	padding-left: 7%;
+ 	padding-right: 7%;
+ 	padding-bottom: 5%;
+}
+
+.formulario label{
+	margin-left: 10%;
+	font-size: 16px;
+ 	font-family:'Roboto Condensed', sans-serif;
+ 	color: white;
+ }
+
+.formulario [type="submit"]{
+	margin-left: 23%;
+	width: 50%;
+	border:1px solid #571146;
+	padding: 2%;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 15px;
+	color:#fff;
+	background-color: #571146;
+}
+
+.formulario [type="text"]{
+	margin-top: 10px;
+	margin-left: 10%;
+	width: 78%;
+	height: 25px;
+	background-color: #571146;
+	color: white;
+	border: none;
+}
+
+.formulario [type="email"]{
+	margin-top: 10px;
+	margin-left: 10%;
+	height: 25px;
+	width: 78%;
+	background-color: #571146;
+	color: white;
+	border: none;
+}
+
+
+.navbar{
+	grid-area: navbar;
+	background-color: #571146;
+}
+
+.bene{
+	color: white;
+	margin-top: 50px;
+	text-align: center;
+	font-size: 38px;
+	font-family: 'Roboto Condensed';
+}
+
+.puntos{
+	line-height: 80px;
+	font-size: 25px;
+	font-family: 'Roboto Condensed';
+	margin-left: 35%;
+	color: white;
+	margin-top: 20px;
+}
+
+.primero{
+	margin-top: -220px;
+	position: absolute;
+	width: 7%;
+	margin-left: 24%;
+}
+
+.testi{
+	margin-top: 50px;
+	grid-area: testi;
+	background-color: #622D50; 
+}
+
+.testi p{
+	color: white;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Roboto Condensed';
+}
+
+.swipe{
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	height: auto;
+	overflow: hidden;
+}
+
+.swipe ul{
+	list-style: none;
+	width: 400%;
+	display: flex;
+	animation: slide 20s infinite alternate;
+}
+
+.swipe img{
+	padding: 3%;
+	width: 100%;
+}
+
+@keyframes slide{
+	0% {margin-left: 0%;}
+	20% {margin-left: 0%;}
+
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+.footer{
+	grid-area: footer;
+	width: 100%;
+}
+.footer a{
+	font-family: 'Roboto Condensed';
+	margin-left: auto;
+  	margin-right: auto;
+ 	font-size: 10px;
+ 	text-decoration: none;
+ 	padding: 2%;
+	box-sizing: border-box;
+ 	color: white;
+	}
+.web{
+ 	margin-top: 60px;
+ 	margin-left: 35%;
+}
+
+.web li {
+ 	display: inline;
+}
+
+.web li a {
+	font-family: 'Roboto Condensed';
+ 	font-size: 17px;
+ 	text-decoration: none;
+ 	padding: 4%;
+	box-sizing: border-box;
+	background-color: #571146;
+ 	color: white;
+ }
+
+.web li a:hover {
+ 	color: white;
+ 	margin-top: -2px;
+ }

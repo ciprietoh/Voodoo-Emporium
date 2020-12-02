@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://www.dafont.com/es/akaposse.font?back=theme');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	min-height: 100%;
+	background-image: url(img/fondo.jpg);
+	background-size: cover no-repeat;
+	max-width: 100%
+}
+
+html{
+	height: 100%;
+}
+
+.grid_container{
+	display: grid;
+	grid-template-areas: 
+	"header"  
+	"main"
+	"sidebar"
+	"extra"
+	"footer"
+}
+
+/*pantalla escritorio*/
+@media screen and (min-width:950px){
+	.grid_container{
+		grid-template:
+		"header 	header 	header	header" 	170px
+		"main 		main	main 	main"		200px
+		"sidebar	sidebar	sidebar sidebar"	370px
+		"extra		extra	extra 	extra"		450px
+		"footer 	footer	footer	footer"		80px /
+		450px		440px 	550px	auto;
+		
+	}
+	
+	.header{
+	grid-area: header;
+	background-color: #622D50;
+}
+
+.logo{
+	margin-top: 25px;
+	display: block;
+	width: 6%;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.logotipo{
+	display: none;
+}
+
+.main{
+	grid-area: main;
+}
+
+.main h1{
+	color: white;
+	margin-top: 40px;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Roboto Condensed';
+}
+
+.main p{
+	color: white;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+}
+	
+.sidebar {
+		grid-area: sidebar;
+	}
+	
+.paleta{
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+	line-height: 35px;
+	color: white;
+	float: left;
+	box-sizing: border-box;
+	display: block;
+	padding-left: 25%
+	}
+	
+.tipo{
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+	line-height: 35px;
+	color: white;
+	float: right;
+	box-sizing: border-box;
+	display: block;
+	padding-right: 15%
+	}
+.oscuro{
+	background-color: #571146;
+	padding: 8px;
+	}
+.claro{
+	background-color: #622D50;
+	padding: 8px;
+	}
+.blanco{
+	color: #571146;
+	background-color: white;
+	padding: 8px;
+	}
+	
+.extra {
+	grid-area: extra;
+	display: inline-flex;
+	box-sizing: border-box
+	}
+
+	
+.escritorio {
+		margin-left: 80px;
+		font-size: 20px;
+		font-family: 'Roboto Condensed';
+		color: white;
+		float: left;
+}
+	
+.escritorio img {
+
+		width: 85%;
+		box-shadow: 10px 10px 40px black;
+	}
+	
+.tablet {
+		margin-right: 20px;
+		font-size: 20px;
+		font-family: 'Roboto Condensed';
+		color: white;
+		float: center;
+		}
+	
+.tablet img {
+		width: 85%;
+		box-shadow: 10px 10px 40px black; 
+	
+		}
+	
+.celular{
+		font-size: 20px;
+		font-family: 'Roboto Condensed';
+		color: white;
+		float: right;
+		margin-right: 60px;
+	text-align: center
+	
+	}
+	
+.celular img{
+		width: 85%;
+		box-shadow: 10px 10px 40px black;
+}
+	
+	
+.footer{
+	grid-area: footer;
+	background-color: #622D50;
+}
+	
+.footer a{
+	font-family: 'Roboto Condensed';
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	float: center;
+	box-sizing: border-box;
+	display: block;
+	margin-top: 25px
+	}
+}
+	
+	
+/*pantalla tablet*/
+@media screen and (min-width:530px) and (max-width: 949px){
+	.grid_container{
+		grid-template:
+		"header 	header 	header	header" 	170px
+		"main 		main	main 	main"		200px
+		"sidebar	sidebar	sidebar sidebar"	320px
+		"extra		extra	extra 	extra"		300px
+		"footer 	footer	footer	footer"		70px /
+		250px		150px 	400px	auto;
+		
+	}
+	
+	.header{
+	grid-area: header;
+	background-color: #622D50;
+}
+
+.logo{
+	margin-top: 25px;
+	display: block;
+	width: 9%;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.logotipo{
+	display: none;
+}
+
+.main{
+	grid-area: main;
+}
+
+.main h1{
+	color: white;
+	margin-top: 40px;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Roboto Condensed';
+}
+
+.main p{
+	color: white;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+}
+	
+.sidebar {
+		grid-area: sidebar;
+	}
+	
+.paleta{
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+	line-height: 35px;
+	color: white;
+	float: left;
+	box-sizing: border-box;
+	display: block;
+	padding-left: 20%
+	}
+	
+.tipo{
+	text-align: center;
+	font-size: 18px;
+	font-family: 'Roboto Condensed';
+	line-height: 35px;
+	color: white;
+	float: right;
+	box-sizing: border-box;
+	display: block;
+	padding-right: 15%
+	}
+.oscuro{
+	background-color: #571146;
+	padding: 8px;
+	}
+.claro{
+	background-color: #622D50;
+	padding: 8px;
+	}
+.blanco{
+	color: #571146;
+	background-color: white;
+	padding: 8px;
+	}
+	
+.extra {
+	grid-area: extra;
+	display: inline-flex;
+	box-sizing: border-box
+	}
+
+	
+.escritorio {
+		margin-left: 80px;
+		font-size: 20px;
+		font-family: 'Roboto Condensed';
+		color: white;
+		float: left;
+}
+	
+.escritorio img {
+
+		width: 85%;
+		box-shadow: 10px 10px 40px black;
+	}
+	
+.tablet {
+		margin-right: 20px;
+		font-size: 20px;
+		font-family: 'Roboto Condensed';
+		color: white;
+		float: center;
+		}
+	
+.tablet img {
+		width: 85%;
+		box-shadow: 10px 10px 40px black; 
+	
+		}
+	
+.celular{
+		font-size: 20px;
+		font-family: 'Roboto Condensed';
+		color: white;
+		float: right;
+		margin-right: 60px;
+	text-align: center
+	
+	}
+	
+.celular img{
+		width: 85%;
+		box-shadow: 10px 10px 40px black;
+}
+	
+	
+.footer{
+	grid-area: footer;
+	background-color: #622D50;
+}
+	
+.footer a{
+	font-family: 'Roboto Condensed';
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	float: center;
+	box-sizing: border-box;
+	display: block;
+	margin-top: 25px
+	}
+}
+
+
+/*pantalla celular*/
+@media screen and (max-width: 529px){
+	.grid_container{
+		grid-template:
+		"header 	header 	header	header" 	100px
+		"main 		main	main 	main"		170px
+		"sidebar	sidebar	sidebar	sidebar"	470px
+		"extra		extra	extra	extra"		1230px
+		"footer		footer	footer	footer"		70px/
+		450px		auto 	auto	auto;
+		
+	}
+	
+	
+.header{
+	grid-area: header;
+	background-color: #622D50;
+}
+
+.logo{
+	display: none
+}
+
+.logotipo{
+	margin-top: 35px;
+	display: block;
+	width: 60%;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.main{
+	grid-area: main;
+}
+
+.main h1{
+	color: white;
+	margin-top: 40px;
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Roboto Condensed';
+}
+
+.main p{
+	color: white;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+}
+	
+.sidebar {
+		grid-area: sidebar;
+	}
+	
+.paleta{
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+	line-height: 35px;
+	color: white;
+	float: center;
+	box-sizing: border-box;
+	display: block;
+	}
+	
+.tipo{
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+	line-height: 35px;
+	color: white;
+	float: center;
+	box-sizing: border-box;
+	display: block;
+	margin-top: 30px
+	}
+.oscuro{
+	background-color: #571146;
+	padding: 8px;
+	}
+.claro{
+	background-color: #622D50;
+	padding: 8px;
+	}
+.blanco{
+	color: #571146;
+	background-color: white;
+	padding: 8px;
+	}
+	
+.extra {
+	grid-area: extra;
+	box-sizing: border-box
+	}
+
+	
+.escritorio {
+		font-size: 20px;
+		font-family: 'Roboto Condensed';
+		color: white;
+		float: center;
+		margin-left: 60px;
+}
+	
+.escritorio img {
+		width: 85%;
+		box-shadow: 10px 10px 40px black;
+	}
+	
+.tablet {
+		font-size: 20px;
+		font-family: 'Roboto Condensed';
+		color: white;
+		margin-left: 60px;
+		margin-top: 20px
+		}
+	
+.tablet img {
+		width: 85%;
+		box-shadow: 10px 10px 40px black;
+	
+		}
+	
+.celular{
+		font-size: 20px;
+		font-family: 'Roboto Condensed';
+		color: white;
+		float: center;
+		margin-left: 60px;
+		margin-top: 20px
+	
+	}
+	
+.celular img{
+		width: 85%;
+		box-shadow: 10px 10px 40px black;
+}
+	
+	
+.footer{
+	grid-area: footer;
+	background-color: #622D50;
+}
+	
+.footer a{
+	font-family: 'Roboto Condensed';
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	float: center;
+	box-sizing: border-box;
+	display: block;
+	margin-top: 25px
+	}
+}	
+	
+	
+	
